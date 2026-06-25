@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camelot Excalibur — EXCAL</title>
+
+  <!-- Google Fonts: Cinzel (gothic/medieval) + Crimson Text (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            parchment: {
+              50:  '#fdf8ed',
+              100: '#f9efd2',
+              200: '#f5e6c8',
+              300: '#edd9a3',
+              400: '#e2c47a',
+              500: '#c9a84c',
+            },
+            gold: {
+              300: '#e8c96e',
+              400: '#c9a84c',
+              500: '#a8852e',
+              600: '#8b6914',
+              700: '#6b4f0e',
+            },
+            brown: {
+              800: '#3b2008',
+              900: '#1e0f02',
+            }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            'cinzel-deco': ['Cinzel Decorative', 'serif'],
+            crimson: ['Crimson Text', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Import Map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@18.2.0",
+      "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+      "ethers": "https://esm.sh/ethers@6.11.1"
+    }
+  }
+  </script>
+
+  <!-- DApp Config -->
+  <script>
+    window.__QUICK_DAPP_CONFIG__ = {
+      title: "Camelot Excalibur",
+      subtitle: "EXCAL Token — The Sword in the Stone",
+      contractAddress: "0x9D7f74d0C41E726EC95884E0e97Fa6129e3b5E99"
+    };
+  </script>
+
+  <link rel="stylesheet" href="./src/index.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="./src/main.jsx"></script>
+</body>
+</html>
